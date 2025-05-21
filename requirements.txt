@@ -1,0 +1,7 @@
+crewai
+fastapi
+uvicorn
+python-dotenv
+linkup-sdk
+streamlit
+fastmcp

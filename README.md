@@ -13,12 +13,31 @@ A multi-agent research assistant powered by CrewAI, LinkUp, and Streamlit. This 
 
 ---
 
+## Features in Detail
+
+### Multi-Agent System
+- Web Searcher: Performs deep web searches using LinkUp API
+- Research Analyst: Analyzes and synthesizes information
+- Technical Writer: Formats and presents findings
+
+### User Interface
+- Interactive chat interface built with Streamlit
+- Real-time response streaming
+- Sidebar configuration for API keys and settings
+
+### Cursor IDE Integration
+- Custom MCP server for enhanced development experience
+- Seamless integration with Cursor IDE features
+- Environment variable management
+
+---
+
 ## Setup Instructions
 
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AnupCloud/Agentic-Deep-Researcher-with-MCP.git
 cd mcp_research
 ```
 
@@ -34,6 +53,8 @@ Use `uv` to install all required packages from `requirements.txt`:
 
 ```bash
 uv pip install -r requirements.txt
+or
+uv add -r requirements.txt
 ```
 
 ### 4. Set Up Environment Variables
@@ -116,10 +137,16 @@ To enable custom MCP server integrated with cursor IDE use `.json` file and add 
 
 ## Troubleshooting
 
-- **Missing API Key:** If you see a prompt for the LinkUp API key, enter it in the sidebar.
-- **Dependency Issues:** Ensure you used `uv pip install -r requirements.txt` and are using Python 3.11+.
-- **Port Conflicts:** If Streamlit fails to launch, try specifying a different port:  
-  `streamlit run src/app.py --server.port 8502`
+- **API Key Issues:** Ensure your LinkUp API key is properly set in `.env` or the Streamlit sidebar
+- **Dependency Problems:** Make sure all requirements are installed: `uv add -r requirements.txt`
+- **Port Conflicts:** If Streamlit fails to launch, try: `streamlit run src/app.py --server.port 8502`
+- **Cursor Integration:** Verify `.cursor.json` configuration and restart Cursor IDE if needed
+
+---
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
@@ -128,6 +155,7 @@ To enable custom MCP server integrated with cursor IDE use `.json` file and add 
 - [CrewAI](https://github.com/joaomdmoura/crewai)
 - [LinkUp](https://linkup.so/)
 - [Streamlit](https://streamlit.io/)
+- [Cursor IDE](https://cursor.sh/)
 
 ---
 
